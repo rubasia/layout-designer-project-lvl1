@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/rubasia/layout-designer-project-lvl1#readme",
   "devDependencies": {
+    "postcss": "^8.4.14",
+    "postcss-loader": "^7.0.0",
     "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard-scss": "^4.0.0"
   },
