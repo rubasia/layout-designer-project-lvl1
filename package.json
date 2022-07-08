@@ -19,5 +19,8 @@
   "devDependencies": {
     "stylelint-config-rational-order": "^0.0.4",
     "stylelint-config-standard-scss": "^4.0.0"
+  },
+  "dependencies": {
+    "postcss-cli": "^10.0.0"
   }
 }
