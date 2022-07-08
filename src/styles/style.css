@@ -1,5 +1,16 @@
 /** CSS STYLE **/
 
+:root {
+  --light: #f5f4f0;
+  --primary: #fe8a02;
+  --primary-dark: #42413c;
+  --dark: #2a2626;
+  --dark50: #908d8b;
+  --brown: #b09a81;
+  --white50: #d7ccc0;
+  --blue: #1085c5;
+}
+
 .hello {
   display: block;
 
