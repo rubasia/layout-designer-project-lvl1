@@ -9,6 +9,36 @@
   --brown: #b09a81;
   --white50: #d7ccc0;
   --blue: #1085c5;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.6em;
+  font-size: 16px;
+  color: #2a2626;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.2em;
+}
+
+h1 {
+  font-size: 72px;
+}
+
+h2 {
+  font-size: 60px;
+}
+
+h3 {
+  font-size: 34px;
+}
+
+section {
+  max-width: 1110px;
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 100px;
 }
 
 .hello {
