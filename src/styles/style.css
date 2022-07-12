@@ -15,6 +15,7 @@
   color: #2a2626;
 }
 
+/* general colors */
 .dark {
   color: var(--dark);
 }
@@ -23,17 +24,24 @@
   color: var(--primary);
 }
 
+/* general layout */
 body {
   width: 100%;
   margin: 0;
 }
 
-header {
-  padding-top: 100px;
-  padding-left: 165px;
-  background-color: var(--light);
+header,
+section {
+  padding: 100px 165px;
 }
 
+.header-content,
+.section-content {
+  max-width: 1110px;
+  position: relative;
+}
+
+/* general fonts */
 h1,
 h2,
 h3 {
@@ -44,7 +52,6 @@ h3 {
 
 h1 {
   margin-top: 0;
-  margin-bottom: 185px;
   font-size: 72px;
 }
 
@@ -54,6 +61,19 @@ h2 {
 
 h3 {
   font-size: 34px;
+}
+
+/* header design */
+header {
+  background-color: var(--light);
+}
+
+.header-content h1 {
+  margin-bottom: 185px;
+}
+
+.section-wrap {
+  overflow: hidden;
 }
 
 header::before {
@@ -70,10 +90,28 @@ header::before {
   content: "";
 }
 
-.section-wrap {
-  overflow: hidden;
+#header-image {
+  position: absolute;
+  top: -45px;
+  right: -270px;
+  height: 525px;
 }
 
+/* button design */
+button {
+  padding: 12px 24px;
+  margin-top: 40px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: white;
+  background: var(--primary);
+  border: none;
+}
+
+/* text layout */
 .paragraph-column {
   margin-top: 0;
 }
@@ -83,33 +121,25 @@ header::before {
   break-after: avoid;
 }
 
-.header-content {
-  max-width: 1110px;
-  position: relative;
-}
-
 .section-text {
   column-count: 2;
   column-gap: 30px;
 }
 
-#header-image {
-  position: absolute;
-  top: -45px;
-  right: -270px;
-  height: 525px;
+/* video section design */
+.centered {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-block-end: 0;
 }
 
-button {
-  padding: 12px 24px;
-  margin-top: 40px;
-  margin-bottom: 100px;
-  font-family: "Open sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  text-transform: uppercase;
-  color: white;
-  background: var(--primary);
-  border: none;
+h1.centered + p {
+  margin-top: 27px;
+  margin-bottom: 30px;
+}
+
+.shadow {
+  filter: drop-shadow(0 16px 32px rgba(0, 0, 0, 0.15));
+  margin-bottom: -200px;
 }
