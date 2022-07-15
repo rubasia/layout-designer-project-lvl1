@@ -12,7 +12,7 @@
   font-family: "Open Sans", sans-serif;
   line-height: 1.6em;
   font-size: 16px;
-  color: #2a2626;
+  color: var(--dark);
 }
 
 .dark {
@@ -21,10 +21,6 @@
 
 .white {
   color: white;
-}
-
-.bg-white {
-  background-color: white;
 }
 
 .bg-light {
@@ -41,7 +37,6 @@
 
 /* general layout */
 body {
-  width: 100%;
   margin: 0;
 }
 
@@ -123,6 +118,7 @@ button:hover {
   overflow: hidden;
 }
 
+/*
 header::before,
 section.bias::before {
   position: absolute;
@@ -138,6 +134,7 @@ section.bias::before {
   opacity: 0.1;
   content: "";
 }
+*/
 
 /* header design */
 .header-content h1 {
@@ -176,6 +173,13 @@ h1.centered + p {
   line-height: 1.2;
 }
 
+.how-it-works {
+  padding: 5px 10px;
+  column-span: all;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+
 .bias-header img {
   background: url("1.png");
   max-width: 100%;
@@ -207,8 +211,12 @@ h1.centered + p {
   color: var(--dark);
 }
 
-.bg-white.how-it-works h3 {
-  color: var(--brown);
+.bg-light .how-it-works {
+  background-color: var(--brown);
+}
+
+.bg-light .how-it-works h3 {
+  color: white;
 }
 
 .bg-brown .bias-header-subtitle {
@@ -221,15 +229,12 @@ h1.centered + p {
   color: white;
 }
 
-.bg-brown.how-it-works h3 {
-  color: white;
+.bg-brown .how-it-works {
+  background-color: white;
 }
 
-.how-it-works {
-  padding: 5px 10px;
-  column-span: all;
-  margin-top: 100px;
-  margin-bottom: 20px;
+.bg-brown .how-it-works h3 {
+  color: var(--brown);
 }
 
 /* navigation section design */
@@ -242,6 +247,10 @@ h1.centered + p {
 .bias-header {
   display: flex;
   gap: 30px;
+}
+
+.bg-brown .bias-header {
+  flex-direction: row-reverse;
 }
 
 #navigation .section-content {
@@ -260,6 +269,8 @@ h1.centered + p {
 }
 
 .card {
+  color: inherit;
+  text-decoration: none;
   background-color: var(--light);
   padding: 24px;
 }
