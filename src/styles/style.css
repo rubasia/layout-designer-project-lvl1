@@ -23,6 +23,10 @@
   color: white;
 }
 
+a {
+  color: var(--blue);
+}
+
 .bg-light {
   background-color: var(--light);
 }
@@ -31,8 +35,8 @@
   background-color: var(--brown);
 }
 
-.bg-dark {
-  background-color: var(--dark);
+.bg-primary-dark {
+  background-color: var(--primary-dark);
 }
 
 .shadow {
@@ -45,10 +49,14 @@ body {
   max-width: 1440px;
 }
 
-header,
 section,
+.section-wrap,
 footer {
   padding: 100px 165px;
+}
+
+.bias {
+  padding: 0;
 }
 
 /* general typography */
@@ -81,12 +89,17 @@ p {
   margin-block-start: 0;
 }
 
+.centered {
+  text-align: center;
+}
+
 /* text layout */
-.section-text p {
+.two-column p {
   margin-top: 0;
 }
 
-.section-text {
+.two-column,
+.contact-form-block {
   column-count: 2;
   column-gap: 30px;
 }
@@ -96,76 +109,35 @@ p {
   break-after: avoid;
 }
 
-/* button design */
-button {
-  padding: 12px 24px;
-  margin-top: 40px;
-  font-family: "Open sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  text-transform: uppercase;
-  color: white;
-  background-color: var(--primary);
-  border: none;
-}
-
-button:hover {
-  background-color: #ea7600;
-}
-
-/* general header&section design */
-.header-content {
+/* underlying pattern design */
+.section-wrap {
+  overflow: hidden;
   position: relative;
 }
 
-.section-wrap {
-  overflow: hidden;
-}
-
-/*
-header::before,
-section.bias::before {
+.section-wrap::before {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background-image: url("../../images/background.png");
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
-  content: "";
+  content: url("../../images/background.png");
 }
-*/
 
 /* header design */
-.header-content h1 {
+header h1 {
   margin-bottom: 185px;
 }
 
 #header-image {
   position: absolute;
-  top: -45px;
-  right: -270px;
+  top: 55px;
+  right: -103.81px;
   height: 525px;
-}
-
-/* video section design */
-.centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-h1.centered + p {
-  margin-top: 27px;
-  margin-bottom: 30px;
-}
-
-.video {
-  margin-bottom: -200px;
 }
 
 /* bias section design */
@@ -230,7 +202,7 @@ h1.centered + p {
 
 .bg-brown .bias-header h2,
 .bg-brown .bias-header h2 + p,
-.bg-brown .section-text {
+.bg-brown .two-column {
   color: white;
 }
 
@@ -243,12 +215,7 @@ h1.centered + p {
 }
 
 /* navigation section design */
-#navigation {
-  padding-top: 200px;
-}
-
-#navigation .section-content,
-.contact-form-block,
+#navigation,
 .bias-header {
   display: flex;
   gap: 30px;
@@ -258,7 +225,8 @@ h1.centered + p {
   flex-direction: row-reverse;
 }
 
-#navigation .section-content {
+#navigation {
+  padding-top: 200px;
   flex-flow: row wrap;
 }
 
@@ -300,6 +268,7 @@ h1.centered + p {
 footer .contact-form-block + .centered p {
   font-size: 14px;
   margin-top: 16px;
+  color: black;
 }
 
 .contact-form-block {
@@ -309,7 +278,7 @@ footer .contact-form-block + .centered p {
 }
 
 .contact-form-title {
-  margin: 0 0 9px 0;
+  margin: 0 0 9px;
   font-size: 18px;
   color: white;
 }
@@ -319,8 +288,13 @@ footer .contact-form-block + .centered p {
   color: white;
 }
 
+.small-text a {
+  color: white;
+  text-decoration: underline;
+}
+
 input {
-  width: 423px;
+  flex-grow: 1;
   height: 50px;
   padding: 15px;
   box-sizing: border-box;
@@ -332,17 +306,52 @@ input::placeholder {
   color: #757575;
 }
 
-.contact-form {
+form {
   display: flex;
-  align-items: stretch;
 }
 
-.contact-form button {
+/* button design */
+button {
+  padding: 12px 24px;
+  margin-top: 40px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+  color: white;
+  background-color: var(--primary);
+  border: none;
+}
+
+form button {
   height: 50px;
   width: 70px;
+  flex-shrink: 0;
   margin: 0;
 }
 
-.contact-form button::before {
+button:hover {
+  background-color: #ea7600;
+}
+
+form button::before {
   content: url("../../images/send.svg");
+}
+
+/* video section design */
+#video {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+#video h1 + p {
+  margin-top: 27px;
+  margin-bottom: 30px;
+}
+
+.video {
+  margin-bottom: -200px;
 }
