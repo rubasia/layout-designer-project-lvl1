@@ -98,6 +98,10 @@ p {
   margin-top: 0;
 }
 
+p.margin-bottom {
+  margin-bottom: 1em;
+}
+
 .two-column,
 .contact-form-block {
   column-count: 2;
@@ -136,6 +140,7 @@ header h1 {
 }
 
 #header-image {
+  z-index: -1;
   position: absolute;
   top: 55px;
   right: -103.81px;
@@ -346,10 +351,6 @@ form {
 }
 
 /* video section design */
-#video h2 {
-  font-size: 72px;
-}
-
 #video {
   display: flex;
   flex-direction: column;
