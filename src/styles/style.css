@@ -113,9 +113,11 @@ p {
 .section-wrap {
   overflow: hidden;
   position: relative;
+  z-index: 1;
 }
 
 .section-wrap::before {
+  z-index: -1;
   position: absolute;
   top: 0;
   left: 0;
@@ -264,6 +266,39 @@ header h1 {
   color: white;
 }
 
+/* button design */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  margin-top: 40px;
+  font-family: "Open sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 160%;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background-color: var(--primary);
+}
+
+form button {
+  height: 50px;
+  width: 70px;
+  border: none;
+  margin: 0;
+  background-color: var(--primary);
+  flex-shrink: 0;
+}
+
+button:hover,
+.button:hover {
+  background-color: #ea7600;
+}
+
+form button::before {
+  content: url("../images/send.svg");
+}
+
 /* footer design */
 footer .contact-form-block + .centered p {
   font-size: 14px;
@@ -310,36 +345,11 @@ form {
   display: flex;
 }
 
-/* button design */
-button {
-  padding: 12px 24px;
-  margin-top: 40px;
-  font-family: "Open sans", sans-serif;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 160%;
-  text-transform: uppercase;
-  color: white;
-  background-color: var(--primary);
-  border: none;
-}
-
-form button {
-  height: 50px;
-  width: 70px;
-  flex-shrink: 0;
-  margin: 0;
-}
-
-button:hover {
-  background-color: #ea7600;
-}
-
-form button::before {
-  content: url("images/send.svg");
-}
-
 /* video section design */
+#video h2 {
+  font-size: 72px;
+}
+
 #video {
   display: flex;
   flex-direction: column;
@@ -347,11 +357,15 @@ form button::before {
   text-align: center;
 }
 
-#video h1 + p {
+#video p {
   margin-top: 27px;
   margin-bottom: 30px;
 }
 
 .video {
   margin-bottom: -200px;
+}
+
+iframe {
+  border: none;
 }
