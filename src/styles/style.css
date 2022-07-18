@@ -125,7 +125,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.1;
-  content: url("../../images/background.png");
+  content: url("../images/background.png");
 }
 
 /* header design */
@@ -336,7 +336,7 @@ button:hover {
 }
 
 form button::before {
-  content: url("../../images/send.svg");
+  content: url("images/send.svg");
 }
 
 /* video section design */
