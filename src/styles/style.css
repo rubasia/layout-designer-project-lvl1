@@ -59,6 +59,13 @@ footer {
   padding: 0;
 }
 
+#navigation,
+.bias-header,
+.two-column {
+  display: flex;
+  gap: 30px;
+}
+
 /* general typography */
 h1,
 h2,
@@ -86,31 +93,14 @@ h3 {
 
 p {
   margin-block-end: 0;
+}
+
+.contact-form-block p {
   margin-block-start: 0;
 }
 
 .centered {
   text-align: center;
-}
-
-/* text layout */
-.two-column p {
-  margin-top: 0;
-}
-
-p.margin-bottom {
-  margin-bottom: 1em;
-}
-
-.two-column,
-.contact-form-block {
-  column-count: 2;
-  column-gap: 30px;
-}
-
-.break-avoid {
-  break-inside: avoid;
-  break-after: avoid;
 }
 
 /* underlying pattern design */
@@ -160,7 +150,7 @@ header h1 {
   padding: 5px 10px;
   column-span: all;
   margin-top: 100px;
-  margin-bottom: 20px;
+  margin-bottom: 4px;
 }
 
 .bias-header img {
@@ -181,6 +171,7 @@ header h1 {
 }
 
 .bias-header-subtitle {
+  margin-top: 0;
   font-family: Neucha, sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -222,10 +213,8 @@ header h1 {
 }
 
 /* navigation section design */
-#navigation,
-.bias-header {
-  display: flex;
-  gap: 30px;
+.two-column div {
+  width: 50%;
 }
 
 .bg-brown .bias-header {
@@ -317,6 +306,10 @@ footer .contact-form-block + .centered p {
   align-items: center;
 }
 
+.contact-form-block div {
+  width: 50%;
+}
+
 .contact-form-title {
   margin: 0 0 9px;
   font-size: 18px;
@@ -359,7 +352,7 @@ form {
 }
 
 #video p {
-  margin-top: 27px;
+  margin-top: 30px;
   margin-bottom: 30px;
 }
 
